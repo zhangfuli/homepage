@@ -4,71 +4,31 @@
 	<meta charset="UTF-8">
 	<title>易班发展中心</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/core.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.map"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js">
-	</script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/vue/2.0.2/vue.js"></script>
+	<script src="https://cdn.bootcss.com/vue-resource/1.0.3/vue-resource.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/core.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.slim.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.slim.min.js"></script>
 </head>
 <body>
-	<div class="top">
-		<img src="images/ybfzzx.png" alt="" height="150px" width="200px" class="img_ybfzzx">
-		<div class="img_left_top">
-			<img src="images/upclogo.png" alt="" height="50px" width="200px">
-			<img src="images/yblogo.png" alt="" height="50px" width="130px" >
-		</div>
-		<div class="button_right_top">
-			<button class="button_right button_denglu">登陆</button>
-			<button class="button_right button_zhuce">注册</button>
-		</div>
-		<div class="left">
-			<button class="button_left">易学习</button>
-			<button class="button_left">易活动</button>
-			<button class="button_left">易生活</button>
-			<button class="button_left">易帮助</button>
-			<button class="button_left">易社区</button>
-			<button class="button_left button_add" onclick="add_left()">添加</button>
-			<button class="button_left" onclick="fs()">fs</button>
-		</div>
-		<div class="center">
-			<div class="center_son" >
-				<img src="images/circle.png" alt="" width="100px">
-				<p>生活查询</p>
-			</div>
-			<div class="center_son center_son_link">
-				<p style="margin:0 -17px;"><img src="images/link.png" alt="" width="100px"></p>
-			</div>
-			<div class="center_son">
-				<img src="images/circle.png" alt="" width="100px">
-				<p>失物招领</p>
-			</div>
-			<div class="center_son center_son_link">
-				<p style="margin:0 -17px;"><img src="images/link.png" alt="" width="100px"></p>
-			</div>
-			<div class="center_son">
-				<img src="images/circle.png" alt="" width="100px">
-				<p>备忘清单</p>
-			</div>
-			<div class="center_son center_son_link">
-				<p style="margin:0 -17px;"><img src="images/link.png" alt="" width="100px"></p>
-			</div>
-			<div class="center_son">
-				<img src="images/circle.png" alt="" width="100px">
-				<p>易博客</p>
-			</div>
-		</div>
-	</div>
-	<div>
-		<img src="images/bottom.png" alt="" width="100%">
+	<div class="top container" id="vue">
+		<h1 class="h1">左标签</h1>
+		<form role="form">
+		  <div class="form-group" action="">
+		    <label for="">名字</label>
+		    <input type="text" class="form-control"  placeholder="">
+		  </div>
+		 
+  		<button type="submit" class="btn btn-default">Submit</button>
+		</form>
 	</div>
 
 </body>
+<script src="script/admin.js"></script>
 </html>
