@@ -30,8 +30,8 @@
 		</div>
 		<div class="center">
 			<div v-for="center in centers" >
-				<div class="center_son">
-					<img src="http://localhost:8086/homepage/app/icon/circle" alt="" width="100px">
+				<div class="center_son" >
+					<div class="center_img"><img src="{{url}}app/icon/circle" alt="" width="100%"></div>
 					<p>{{center.name}}</p>
 				</div>
 				<div class="center_son center_son_link" v-if="none($index)">
@@ -68,6 +68,5 @@
 		<img src="images/bottom.png" alt="" width="100%">
 	</div>
 </body>
-<script src="script/config.js"></script>
 <script src="script/index.js"></script>
 </html>
