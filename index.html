@@ -3,7 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>易班发展中心</title>
+	<!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css"> -->
 	<link rel="stylesheet" href="style.css">
+
 	<script src="script/vue.js"></script>
 	<script src="https://cdn.bootcss.com/vue-resource/1.0.3/vue-resource.js"></script>
 	
@@ -30,11 +33,11 @@
 		</div>
 		<div class="center">
 			<div v-for="center in centers" >
-				<div class="center_son" >
+				<div class="center_son" v-on:click="app_href($index)">
 					<div class="center_img"><img src="{{url}}app/icon/circle" alt="" width="100%"></div>
-					<p>{{center.name}}</p>
+					<p style="margin-left:25%">{{center.name}}</p>
 				</div>
-				<div class="center_son center_son_link" v-if="none($index)">
+				<div class="center_son_link" v-if="none($index)">
 					<p style="margin:0 -17px;"><img src="images/link.png" alt="" width="100px"></p>
 				</div>
 			</div>

@@ -10,7 +10,8 @@ var vm = new Vue({
 		url:"http://localhost:8086/homepage/",
 		left_lists:{},
 		centers:{},
-		centerlength:''
+		centerlength:'',
+		selected:''
 	},
 	methods:{
 		//获得左侧tab
@@ -36,10 +37,14 @@ var vm = new Vue({
 				})
 			}	  
 		},
+		//点击链接
+		app_href:function(index){
+			window.open(this.centers[index+1].href);
+		},
 		//用于删除多余的图片连接
 		none:function(index){
 			index = index + 1;
-			if(index == this.centerlength){
+			if(index == this.centerlength||index%4==0){
 				return false;
 			}else{
 				return true;
@@ -56,10 +61,36 @@ var vm = new Vue({
 					alert("未知错误")
 				}
 			})
+		},
+		//用于删除右侧
+		delete_app:function(index){
+			var app_id = this.centers[index].id;
+			this.$http.get(this.url+"app/update?id="+app_id).then(function(response){
+				if(response.data.code == 0){
+					this.centers.splice(index,1);
+					alert("删除成功")
+				}else{
+					alert("未知错误");
+				}
+			});
 		}
 	},
 });
 vm.get_left();
 vm.left_button_click();
+function submit_form(){
+	console.log(vm.url);
+
+	$.ajax({
+                url: vm.url+'app/create',
+                type:'post',
+                data: new FormData(this),
+                processData:false,
+                cache: false,
+                contentType:false,
+
+            })
+
+}
 
 
