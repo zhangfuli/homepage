@@ -79,8 +79,6 @@ var vm = new Vue({
 vm.get_left();
 vm.left_button_click();
 function submit_form(){
-	console.log(vm.url);
-
 	$.ajax({
                 url: vm.url+'app/create',
                 type:'post',
@@ -88,9 +86,7 @@ function submit_form(){
                 processData:false,
                 cache: false,
                 contentType:false,
-
             })
-
 }
 
 
