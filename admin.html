@@ -41,9 +41,9 @@
 				<select name="" v-model="selected">
 					<option v-for="list in left_lists" value="{{list.id}}">{{list.name}}</option>
 				</select><br><br>
-				<label for="tabid">tabid</label>
-				<input type="text" value="{{selected}}" name="tabid" >
-				<span>*不可更改</span><br><br>
+<!-- 				<label for="tabid">tabid</label> -->
+				<input type="text" value="{{selected}}" name="tabid" style="visibility:hidden">
+				<!-- <span>*不可更改</span> --><br><br>
 				<label for="icon">选择图标</label>
 				<input type="file" name="icon">
 				<label for="name">名字</label><span>*必填</span>
